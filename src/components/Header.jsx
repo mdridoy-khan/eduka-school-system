@@ -307,7 +307,7 @@ const Header = () => {
                                     <ul className="dropdown-menu fade-down">
                                         <li><a className="dropdown-item" href="blog.html">IGCSE Cambridge</a></li>
                                         <li><a className="dropdown-item" href="blog-single.html">As Level Registration</a></li>
-                                        <li><a className="dropdown-item" href="blog-single.html">Registration to be a Teacher</a></li>
+                                        <li><a className="dropdown-item" href="blog-single.html">Registration To Be a Teacher</a></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item"><a className="nav-link" href="contact.html">Contact</a></li>
@@ -322,7 +322,7 @@ const Header = () => {
                                 </div>
                                 <div className="nav-right-btn mt-2">
                                     <a href="application-form.html" className="theme-btn"><span
-                                            className="fal fa-pencil"></span>Apply Now</a>
+                                        className="fal fa-pencil"></span>Login</a>
                                 </div>
                             </div>
                         </div>
