@@ -1,6 +1,7 @@
 import CounterBox from "../../components/CounterBox"
 import CourseCard from "../../components/CourseCard"
 import FeatureCard from "../../components/FeatureCard"
+import SectionTitle from "../../components/SectionTitle"
 import TeamCard from "../../components/TeamCard"
 import Video from "../../components/Video"
 import AboutUsSec from "./AboutUsSec"
@@ -12,6 +13,82 @@ import Events from "./Events"
 import GalleryArea from "./GalleryArea"
 import Slider from "./Slider"
 import TestimonialArea from "./TestimonialArea"
+
+import Image1 from '../../../public/assets/img/course/01.jpg'
+import Image2 from '../../../public/assets/img/course/02.jpg'
+import Image3 from '../../../public/assets/img/course/03.jpg'
+import Image4 from '../../../public/assets/img/course/04.jpg'
+import Image5 from '../../../public/assets/img/course/05.jpg'
+import Image6 from '../../../public/assets/img/course/06.jpg'
+
+const data = [
+    {
+        title: "Acting And Drama",
+        image: Image1,
+        tag: "Art",
+        lessons: 10,
+        rating: 1,
+        description: "Learn the art of acting and drama.",
+        seats: 30,
+        duration: 2,
+        price: 199
+        },
+    {
+        title: "Music Theory",
+        image: Image2,
+        tag: "Music",
+        lessons: 8,
+        rating: 3.5,
+        description: "Understand the fundamentals of music theory.",
+        seats: 25,
+        duration: 1,
+        price: 149
+    },
+    {
+        title: "Advanced Mathematics",
+        image: Image3,
+        tag: "Math",
+        lessons: 12,
+        rating: 4.8,
+        description: "Dive deep into advanced mathematical concepts.",
+        seats: 20,
+        duration: 3,
+        price: 299
+    },
+    {
+        title: "Introduction to Psychology",
+        image: Image4,
+        tag: "Psychology",
+        lessons: 10,
+        rating: 4.6,
+        description: "Explore the fundamentals of psychology.",
+        seats: 30,
+        duration: 2,
+        price: 199
+    },
+    {
+        title: "Web Development",
+        image: Image5,
+        tag: "Technology",
+        lessons: 15,
+        rating: 4.7,
+        description: "Learn how to build modern websites.",
+        seats: 40,
+        duration: 4,
+        price: 249
+    },
+    {
+        title: "Graphic Design",
+        image: Image6,
+        tag: "Design",
+        lessons: 10,
+        rating: 4.5,
+        description: "Master the principles of graphic design.",
+        seats: 35,
+        duration: 2,
+        price: 179
+    }   
+]
 
 // import React, { useEffect, useState } from "react";
 const Home = () => {
@@ -76,33 +153,22 @@ const Home = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 mx-auto">
-                            <div className="site-heading text-center">
-                                <span className="site-title-tagline"><i className="far fa-book-open-reader"></i> Our Courses</span>
-                                <h2 className="site-title">Let's Check Our <span>Courses</span></h2>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of
-                                    a page when looking at its layout.</p>
-                            </div>
+                            <SectionTitle
+                                title="Let's Check Our"
+                                colortext="Courses"
+                                subtitle="Our Courses"
+                                description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+                            />
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-md-6 col-lg-4">
-                            <CourseCard />
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <CourseCard />
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <CourseCard />
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <CourseCard />
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <CourseCard />
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <CourseCard />
-                        </div>
+                       {
+                        data.map((course, index) => (
+                            <div className="col-md-6 col-lg-4" key={index}>
+                                <CourseCard data={course} />
+                            </div>
+                        ))
+                       }
                     </div>
                 </div>
             </div>

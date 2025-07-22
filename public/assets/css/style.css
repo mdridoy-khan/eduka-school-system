@@ -146,7 +146,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   box-sizing: border-box;
-  font-family: var(--body-font);
+  font-family: var(--body-font) !important;
   font-style: normal;
   font-size: 16px;
   color: var(--body-text-color);
@@ -154,7 +154,7 @@ body {
 }
 
 body {
-  font-family: var(--body-font);
+  font-family: var(--body-font) !important;
   font-style: normal;
   font-size: 16px;
   font-weight: normal;
@@ -793,7 +793,7 @@ label {
   .container-md,
   .container-lg,
   .container-xl {
-    max-width: 1200px;
+    max-width: 1200px !important;
   }
 }
 
