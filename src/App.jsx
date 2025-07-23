@@ -4,9 +4,6 @@ import Header from './components/Header'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
 import Footer from './components/Footer'
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import 'owl.carousel';
 import Courses from './pages/courses/Courses'
 import TermsAndConditions from './pages/terms-and-conditions/TermsAndConditions'
 import PrivacyPolicy from './pages/privacy-policy/PrivacyPolicy'

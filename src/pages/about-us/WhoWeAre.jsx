@@ -1,4 +1,6 @@
 import BreadcrumbImage from '../../../public/assets/img/breadcrumb/01.jpg'
+import OurPartner from '../../components/OurPartner'
+import TestimonialArea from '../home/TestimonialArea'
 const WhoWeAre = () => {
     return (
         <main className="main">
@@ -161,142 +163,7 @@ const WhoWeAre = () => {
 
 
             {/* testimonial area */}
-            <div className="testimonial-area bg py-120">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-6 mx-auto">
-                            <div className="site-heading text-center">
-                                <span className="site-title-tagline"><i className="far fa-book-open-reader"></i> Testimonials</span>
-                                <h2 className="site-title">What Our Students <span>Say's</span></h2>
-                                <p>It is a long established fact that a reader will be distracted by the readable content of
-                                    a page when looking at its layout.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="testimonial-slider owl-carousel owl-theme">
-                        <div className="testimonial-item">
-                            <div className="testimonial-rate">
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                            </div>
-                            <div className="testimonial-quote">
-                                <p>
-                                    There are many variations of tend to repeat chunks some all form necessary injected for the going are humour words.
-                                </p>
-                            </div>
-                            <div className="testimonial-content">
-                                <div className="testimonial-author-img">
-                                    <img src="assets/img/testimonial/01.jpg" alt="" />
-                                </div>
-                                <div className="testimonial-author-info">
-                                    <h4>Anthony Nicoll</h4>
-                                    <p>Student</p>
-                                </div>
-                            </div>
-                            <span className="testimonial-quote-icon"><i className="far fa-quote-right"></i></span>
-                        </div>
-                        <div className="testimonial-item">
-                            <div className="testimonial-rate">
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                            </div>
-                            <div className="testimonial-quote">
-                                <p>
-                                    There are many variations of tend to repeat chunks some all form necessary injected for the going are humour words.
-                                </p>
-                            </div>
-                            <div className="testimonial-content">
-                                <div className="testimonial-author-img">
-                                    <img src="assets/img/testimonial/02.jpg" alt="" />
-                                </div>
-                                <div className="testimonial-author-info">
-                                    <h4>Richard Lock</h4>
-                                    <p>Student</p>
-                                </div>
-                            </div>
-                            <span className="testimonial-quote-icon"><i className="far fa-quote-right"></i></span>
-                        </div>
-                        <div className="testimonial-item">
-                            <div className="testimonial-rate">
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                            </div>
-                            <div className="testimonial-quote">
-                                <p>
-                                    There are many variations of tend to repeat chunks some all form necessary injected for the going are humour words.
-                                </p>
-                            </div>
-                            <div className="testimonial-content">
-                                <div className="testimonial-author-img">
-                                    <img src="assets/img/testimonial/03.jpg" alt="" />
-                                </div>
-                                <div className="testimonial-author-info">
-                                    <h4>Randal Grand</h4>
-                                    <p>Student</p>
-                                </div>
-                            </div>
-                            <span className="testimonial-quote-icon"><i className="far fa-quote-right"></i></span>
-                        </div>
-                        <div className="testimonial-item">
-                            <div className="testimonial-rate">
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                            </div>
-                            <div className="testimonial-quote">
-                                <p>
-                                    There are many variations of tend to repeat chunks some all form necessary injected for the going are humour words.
-                                </p>
-                            </div>
-                            <div className="testimonial-content">
-                                <div className="testimonial-author-img">
-                                    <img src="assets/img/testimonial/04.jpg" alt="" />
-                                </div>
-                                <div className="testimonial-author-info">
-                                    <h4>Edward Miles</h4>
-                                    <p>Student</p>
-                                </div>
-                            </div>
-                            <span className="testimonial-quote-icon"><i className="far fa-quote-right"></i></span>
-                        </div>
-                        <div className="testimonial-item">
-                            <div className="testimonial-rate">
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                                <i className="fas fa-star"></i>
-                            </div>
-                            <div className="testimonial-quote">
-                                <p>
-                                    There are many variations of tend to repeat chunks some all form necessary injected for the going are humour words.
-                                </p>
-                            </div>
-                            <div className="testimonial-content">
-                                <div className="testimonial-author-img">
-                                    <img src="assets/img/testimonial/05.jpg" alt="" />
-                                </div>
-                                <div className="testimonial-author-info">
-                                    <h4>Ninal Gordon</h4>
-                                    <p>Student</p>
-                                </div>
-                            </div>
-                            <span className="testimonial-quote-icon"><i className="far fa-quote-right"></i></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <TestimonialArea />
             {/* testimonial area end */}
 
 
@@ -401,19 +268,7 @@ const WhoWeAre = () => {
 
 
             {/* partner area */}
-            <div className="partner-area bg pt-50 pb-50">
-                <div className="container">
-                    <div className="partner-wrapper partner-slider owl-carousel owl-theme">
-                        <img src="assets/img/partner/01.png" alt="thumb" />
-                        <img src="assets/img/partner/02.png" alt="thumb" />
-                        <img src="assets/img/partner/03.png" alt="thumb" />
-                        <img src="assets/img/partner/04.png" alt="thumb" />
-                        <img src="assets/img/partner/01.png" alt="thumb" />
-                        <img src="assets/img/partner/02.png" alt="thumb" />
-                        <img src="assets/img/partner/04.png" alt="thumb" />
-                    </div>
-                </div>
-            </div>
+            <OurPartner />
             {/* partner area end */}
 
         </main>
