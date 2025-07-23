@@ -1,5 +1,6 @@
 import React from "react";
 import Breadcrumb from "../../components/Breadcrumb";
+import { Link } from "react-router-dom";
 
 const Courses = () => {
     return (
@@ -21,7 +22,7 @@ const Courses = () => {
                                         <div className="course-img">
                                             <span className="course-tag"><i className="far fa-bookmark"></i> Drama</span>
                                             <img src="assets/img/course/01.jpg" alt="" />
-                                            <a href="course-single.html" className="btn"><i className="far fa-link"></i></a>
+                                            <Link to="/course-single" className="btn"><i className="far fa-link"></i></Link>
                                         </div>
                                         <div className="course-content">
                                             <div className="course-meta">
@@ -36,7 +37,7 @@ const Courses = () => {
                                                 </div>
                                             </div>
                                             <h4 className="course-title">
-                                                <a href="#">Acting And Drama</a>
+                                                <Link to="/course-single">Acting And Drama</Link>
                                             </h4>
                                             <p className="course-text">
                                                 There are many variations of passages orem psum available but the majority have
@@ -57,7 +58,7 @@ const Courses = () => {
                                         <div className="course-img">
                                             <span className="course-tag"><i className="far fa-bookmark"></i> Design</span>
                                             <img src="assets/img/course/02.jpg" alt="" />
-                                            <a href="course-single.html" className="btn"><i className="far fa-link"></i></a>
+                                            <Link to="/course-single" className="btn"><i className="far fa-link"></i></Link>
                                         </div>
                                         <div className="course-content">
                                             <div className="course-meta">
@@ -72,7 +73,7 @@ const Courses = () => {
                                                 </div>
                                             </div>
                                             <h4 className="course-title">
-                                                <a href="#">Art And Design</a>
+                                                <Link to="/course-single">Art And Design</Link>
                                             </h4>
                                             <p className="course-text">
                                                 There are many variations of passages orem psum available but the majority have
@@ -93,7 +94,7 @@ const Courses = () => {
                                         <div className="course-img">
                                             <span className="course-tag"><i className="far fa-bookmark"></i> Science</span>
                                             <img src="assets/img/course/03.jpg" alt="" />
-                                            <a href="course-single.html" className="btn"><i className="far fa-link"></i></a>
+                                            <Link href="/course-single" className="btn"><i className="far fa-link"></i></Link>
                                         </div>
                                         <div className="course-content">
                                             <div className="course-meta">
@@ -108,7 +109,7 @@ const Courses = () => {
                                                 </div>
                                             </div>
                                             <h4 className="course-title">
-                                                <a href="#">Biology And Conservation</a>
+                                                <Link to="/course-single">Biology And Conservation</Link>
                                             </h4>
                                             <p className="course-text">
                                                 There are many variations of passages orem psum available but the majority have
@@ -129,7 +130,7 @@ const Courses = () => {
                                         <div className="course-img">
                                             <span className="course-tag"><i className="far fa-bookmark"></i> Science</span>
                                             <img src="assets/img/course/04.jpg" alt="" />
-                                            <a href="course-single.html" className="btn"><i className="far fa-link"></i></a>
+                                            <Link to="/course-single" className="btn"><i className="far fa-link"></i></Link>
                                         </div>
                                         <div className="course-content">
                                             <div className="course-meta">
@@ -144,7 +145,7 @@ const Courses = () => {
                                                 </div>
                                             </div>
                                             <h4 className="course-title">
-                                                <a href="#">Science And Engineering</a>
+                                                <Link to="/course-single">Science And Engineering</Link>
                                             </h4>
                                             <p className="course-text">
                                                 There are many variations of passages orem psum available but the majority have
@@ -165,7 +166,7 @@ const Courses = () => {
                                         <div className="course-img">
                                             <span className="course-tag"><i className="far fa-bookmark"></i> Health</span>
                                             <img src="assets/img/course/05.jpg" alt="" />
-                                            <a href="course-single.html" className="btn"><i className="far fa-link"></i></a>
+                                            <Link to="/course-single" className="btn"><i className="far fa-link"></i></Link>
                                         </div>
                                         <div className="course-content">
                                             <div className="course-meta">
@@ -180,7 +181,7 @@ const Courses = () => {
                                                 </div>
                                             </div>
                                             <h4 className="course-title">
-                                                <a href="#">Health Administration</a>
+                                                <Link to="/course-single">Health Administration</Link>
                                             </h4>
                                             <p className="course-text">
                                                 There are many variations of passages orem psum available but the majority have
@@ -201,7 +202,7 @@ const Courses = () => {
                                         <div className="course-img">
                                             <span className="course-tag"><i className="far fa-bookmark"></i> Finance</span>
                                             <img src="assets/img/course/06.jpg" alt="" />
-                                            <a href="course-single.html" className="btn"><i className="far fa-link"></i></a>
+                                            <Link to="/course-single" className="btn"><i className="far fa-link"></i></Link>
                                         </div>
                                         <div className="course-content">
                                             <div className="course-meta">
@@ -216,7 +217,7 @@ const Courses = () => {
                                                 </div>
                                             </div>
                                             <h4 className="course-title">
-                                                <a href="#">Accounting And Finance</a>
+                                                <Link to="/course-single">Accounting And Finance</Link>
                                             </h4>
                                             <p className="course-text">
                                                 There are many variations of passages orem psum available but the majority have

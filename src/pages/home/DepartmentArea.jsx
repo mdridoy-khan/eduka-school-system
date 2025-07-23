@@ -1,8 +1,46 @@
 import React from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const DepartmentArea = () => {
+    const departments = [
+        {
+            icon: "assets/img/icon/monitor.svg",
+            title: "Business And Finance",
+            desc: "There are many variations of passages the majority have some injected humour.",
+            link: "academic-single.html"
+        },
+        {
+            icon: "assets/img/icon/law.svg",
+            title: "Law And Criminology",
+            desc: "There are many variations of passages the majority have some injected humour.",
+            link: "academic-single.html"
+        },
+        {
+            icon: "assets/img/icon/data.svg",
+            title: "IT And Data Science",
+            desc: "There are many variations of passages the majority have some injected humour.",
+            link: "academic-single.html"
+        },
+        {
+            icon: "assets/img/icon/health.svg",
+            title: "Health And Medicine",
+            desc: "There are many variations of passages the majority have some injected humour.",
+            link: "academic-single.html"
+        },
+        {
+            icon: "assets/img/icon/art.svg",
+            title: "Art And Design",
+            desc: "There are many variations of passages the majority have some injected humour.",
+            link: "academic-single.html"
+        },
+    ];
+
     return (
-        <div className="department-area bg py-120">
+        <div className="department-area slider-wrapper bg py-120">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 mx-auto">
@@ -14,70 +52,44 @@ const DepartmentArea = () => {
                         </div>
                     </div>
                 </div>
-                <div className="department-slider owl-carousel owl-theme">
-                    <div className="department-item">
-                        <div className="department-icon">
-                            <img src="assets/img/icon/monitor.svg" alt="" />
-                        </div>
-                        <div className="department-info">
-                            <h4 className="department-title"><a href="academic-single.html">Business And Finance</a></h4>
-                            <p>There are many variations of passages the majority have some injected humour.</p>
-                            <div className="department-btn">
-                                <a href="academic-single.html">Read More<i className="fas fa-arrow-right-long"></i></a>
+
+                <Swiper
+                    className="department-slider slider-control"
+                    modules={[Navigation, Pagination, Autoplay]}
+                    spaceBetween={30}
+                    slidesPerView={3}
+                    navigation
+                    pagination={{ clickable: true }}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    loop={true}
+                    breakpoints={{
+                        0: { slidesPerView: 1 },
+                        768: { slidesPerView: 2 },
+                        992: { slidesPerView: 3 }
+                    }}
+                >
+                    {departments.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="department-item">
+                                <div className="department-icon">
+                                    <img src={item.icon} alt={item.title} />
+                                </div>
+                                <div className="department-info">
+                                    <h4 className="department-title">
+                                        <a href={item.link}>{item.title}</a>
+                                    </h4>
+                                    <p>{item.desc}</p>
+                                    <div className="department-btn">
+                                        <a href={item.link}>Read More<i className="fas fa-arrow-right-long"></i></a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="department-item">
-                        <div className="department-icon">
-                            <img src="assets/img/icon/law.svg" alt="" />
-                        </div>
-                        <div className="department-info">
-                            <h4 className="department-title"><a href="academic-single.html">Law And Criminology</a></h4>
-                            <p>There are many variations of passages the majority have some injected humour.</p>
-                            <div className="department-btn">
-                                <a href="academic-single.html">Read More<i className="fas fa-arrow-right-long"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="department-item">
-                        <div className="department-icon">
-                            <img src="assets/img/icon/data.svg" alt="" />
-                        </div>
-                        <div className="department-info">
-                            <h4 className="department-title"><a href="academic-single.html">IT And Data Science</a></h4>
-                            <p>There are many variations of passages the majority have some injected humour.</p>
-                            <div className="department-btn">
-                                <a href="academic-single.html">Read More<i className="fas fa-arrow-right-long"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="department-item">
-                        <div className="department-icon">
-                            <img src="assets/img/icon/health.svg" alt="" />
-                        </div>
-                        <div className="department-info">
-                            <h4 className="department-title"><a href="academic-single.html">Health And Medicine</a></h4>
-                            <p>There are many variations of passages the majority have some injected humour.</p>
-                            <div className="department-btn">
-                                <a href="academic-single.html">Read More<i className="fas fa-arrow-right-long"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="department-item">
-                        <div className="department-icon">
-                            <img src="assets/img/icon/art.svg" alt="" />
-                        </div>
-                        <div className="department-info">
-                            <h4 className="department-title"><a href="academic-single.html">Art And Design</a></h4>
-                            <p>There are many variations of passages the majority have some injected humour.</p>
-                            <div className="department-btn">
-                                <a href="academic-single.html">Read More<i className="fas fa-arrow-right-long"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </div>
-    )
-}
-export default DepartmentArea
+    );
+};
+
+export default DepartmentArea;

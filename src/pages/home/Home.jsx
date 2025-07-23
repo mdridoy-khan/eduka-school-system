@@ -20,6 +20,8 @@ import Image3 from '../../../public/assets/img/course/03.jpg'
 import Image4 from '../../../public/assets/img/course/04.jpg'
 import Image5 from '../../../public/assets/img/course/05.jpg'
 import Image6 from '../../../public/assets/img/course/06.jpg'
+import CtaBgImage from '../../../public/assets/img/cta/01.jpg'
+import OurPartner from "../../components/OurPartner"
 
 const data = [
     {
@@ -244,7 +246,7 @@ const Home = () => {
 
 
             {/* cta-area */}
-            <div className="cta-area">
+            <div className="cta-area" style={{ backgroundImage: `url(${CtaBgImage})` }}>
                 <div className="container">
                     <div className="cta-wrapper">
                         <div className="row align-items-center">
@@ -293,19 +295,7 @@ const Home = () => {
 
 
             {/* partner area */}
-            <div className="partner-area bg pt-50 pb-50">
-                <div className="container">
-                    <div className="partner-wrapper partner-slider owl-carousel owl-theme">
-                        <img src="assets/img/partner/01.png" alt="thumb" />
-                        <img src="assets/img/partner/02.png" alt="thumb" />
-                        <img src="assets/img/partner/03.png" alt="thumb" />
-                        <img src="assets/img/partner/04.png" alt="thumb" />
-                        <img src="assets/img/partner/01.png" alt="thumb" />
-                        <img src="assets/img/partner/02.png" alt="thumb" />
-                        <img src="assets/img/partner/04.png" alt="thumb" />
-                    </div>
-                </div>
-            </div>
+            <OurPartner />
             {/* partner area end */}
 
         </main>

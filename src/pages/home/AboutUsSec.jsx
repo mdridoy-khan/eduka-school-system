@@ -15,7 +15,7 @@ const AboutUsSec = () => {
                                             <div className="about-experience-icon">
                                                 <img src="assets/img/icon/exchange-idea.svg" alt="" />
                                             </div>
-                                            <b className="text-start">30 Years Of <br /> Quality Service</b>
+                                            <b className="text-start" data-aos="fade-right" data-aos-delay="300">30 Years Of <br /> Quality Service</b>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
@@ -29,12 +29,12 @@ const AboutUsSec = () => {
                     <div className="col-lg-6">
                         <div className="about-right wow fadeInRight" data-wow-delay=".25s">
                             <div className="site-heading mb-3">
-                                <span className="site-title-tagline"><i className="far fa-book-open-reader"></i> About Us</span>
-                                <h2 className="site-title">
+                                <span className="site-title-tagline"><i className="far fa-book-open-reader" data-aos="fade-right" data-aos-delay="500"></i> About Us</span>
+                                <h2 className="site-title" data-aos="fade-up" data-aos-delay="300">
                                     Our Edukation System <span>Inspires</span> You More.
                                 </h2>
                             </div>
-                            <p className="about-text">
+                            <p className="about-text" data-aos="fade-left" data-aos-delay="700">
                                 There are many variations of passages available but the majority have suffered
                                 alteration in some form by injected humour randomised words which don't look even
                                 slightly believable. If you are going to use passage.

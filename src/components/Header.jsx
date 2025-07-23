@@ -1,5 +1,7 @@
 
-// import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import {Link } from 'react-router-dom';
+import Logo from '../../public/assets/img/logo/logo-light.png'
 const Header = () => {
     // const [isSearchActive, setIsSearchActive] = useState(false);
     // useEffect(() => {
@@ -14,6 +16,21 @@ const Header = () => {
     //     document.body.classList.remove('search-active');
     //     };
     // }, [isSearchActive]);
+    const [isSearchActive, setIsSearchActive] = useState(false);
+
+    useEffect(() => {
+        if (isSearchActive) {
+            document.body.classList.add('search-active');
+        }else{
+            document.body.classList.remove('search-active');
+        }
+
+        return () => {
+            document.body.classList.remove('search-active')
+        };
+    }, [isSearchActive])
+
+
     return (
         <header className="header">
             <div className="header-top">
@@ -50,9 +67,9 @@ const Header = () => {
             <div className="main-navigation">
                 <nav className="navbar navbar-expand-lg">
                     <div className="container position-relative">
-                        <a className="navbar-brand" href="/">
+                        <Link className="navbar-brand" to="/">
                             <img src="assets/img/logo/logo.png" alt="logo" />
-                        </a>
+                        </Link>
                         <div className="mobile-menu-right">
                             <div className="search-btn">
                                 <button type="button" className="nav-right-link search-box-outer"><i
@@ -74,12 +91,12 @@ const Header = () => {
                                     </ul>
                                 </li> */}
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About Us</a>
+                                    <Link className="nav-link dropdown-toggle" to="/" data-bs-toggle="dropdown">About Us</Link>
                                     <ul className="dropdown-menu fade-down">
-                                        <li><a className="dropdown-item" href="course.html">Founder and CEO</a></li>
-                                        <li><a className="dropdown-item" href="course-2.html">Terms & Conditions</a></li>
-                                        <li><a className="dropdown-item" href="course-single.html">Privacy Policy</a></li>
-                                        <li><a className="dropdown-item" href="course-single-2.html">Who We Are?</a></li>
+                                        <li><Link className="dropdown-item" to="/">Founder and CEO</Link></li>
+                                        <li><Link className="dropdown-item" to="/terms-and-conditions">Terms & Conditions</Link></li>
+                                        <li><Link className="dropdown-item" to="/privacy-policy">Privacy Policy</Link></li>
+                                        <li><Link className="dropdown-item" to="/who-we-are">Who We Are?</Link></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item mega-menu dropdown">
@@ -91,35 +108,38 @@ const Header = () => {
                                                     <div className="col-12 col-sm-4 col-md-3">
                                                         <h5>About Us</h5>
                                                         <div className="menu-about">
-                                                            <a href="#" className="menu-about-logo"><img
-                                                                    src="assets/img/logo/logo-light.png" alt="" /></a>
-                                                            <p>We are many variations of passages available but the majority
+                                                            <Link to="/" className="menu-about-logo">
+                                                                <img src={Logo} alt="site logo" />
+                                                            </Link>
+                                                            <p>
+                                                                We are many variations of passages available but the majority
                                                                 have suffered alteration in some form by injected humour
-                                                                words injected humour believable.</p>
+                                                                words injected humour believable.
+                                                            </p>
                                                         </div>
                                                     </div>
                                                     <div className="col-12 col-sm-4 col-md-3">
                                                         <h5>Kids Section</h5>
                                                         <ul className="mega-menu-item">
                                                             <li>
-                                                                <a className="dropdown-item" href="academic-single.html">
+                                                                <Link className="dropdown-item" to="/course-single">
                                                                     Kids Level 1 (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                             <li>
-                                                                <a className="dropdown-item" href="academic-single.html">
+                                                                <Link className="dropdown-item" to="/course-single">
                                                                     Kids Level 2 (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                             <li>
-                                                                <a className="dropdown-item" href="academic-single.html">
+                                                                <Link className="dropdown-item" to="/course-single">
                                                                     Kids Level 3 (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                             <li>
-                                                                <a className="dropdown-item" href="academic-single.html">
+                                                                <Link className="dropdown-item" to="/course-single">
                                                                     Kids Level 4 (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -127,60 +147,60 @@ const Header = () => {
                                                         <h5>Basic Section</h5>
                                                         <ul className="mega-menu-item">
                                                             <li>
-                                                                <a 
+                                                                <Link 
                                                                     className="dropdown-item"
-                                                                    href="academic-single.html"
+                                                                    to="/course-single"
                                                                 >
                                                                     Basic Level 1 (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                             <li>
-                                                                <a 
+                                                                <Link 
                                                                     className="dropdown-item"
-                                                                    href="academic-single.html"
+                                                                    to="/course-single"
                                                                 >
                                                                     Basic Level 2 (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                             <li>
-                                                                <a 
+                                                                <Link 
                                                                     className="dropdown-item"
-                                                                    href="academic-single.html"
+                                                                    to="/course-single"
                                                                 >
                                                                     Basic Level 3 (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                             <li>
-                                                                <a 
+                                                                <Link 
                                                                     className="dropdown-item"
-                                                                    href="academic-single.html"
+                                                                    to="/course-single"
                                                                 >
                                                                     Basic Level 4 (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                             <li>
-                                                                <a 
+                                                                <Link 
                                                                     className="dropdown-item"
-                                                                    href="academic-single.html"
+                                                                    to="/course-single"
                                                                 >
                                                                     Basic Level 5 (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                             <li>
-                                                                <a 
+                                                                <Link 
                                                                     className="dropdown-item"
-                                                                    href="academic-single.html"
+                                                                    to="/course-single"
                                                                 >
                                                                     Basic Level 6 (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                             <li>
-                                                                <a 
+                                                                <Link 
                                                                     className="dropdown-item"
-                                                                    href="academic-single.html"
+                                                                    to="/course-single"
                                                                 >
                                                                     Basic Level 7 (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -188,19 +208,19 @@ const Header = () => {
                                                         <h5>Teen Section</h5>
                                                         <ul className="mega-menu-item">
                                                             <li>
-                                                                <a className="dropdown-item" href="academic.html">
+                                                                <Link className="dropdown-item" to="/course-single">
                                                                     Pre 0 Level (Online)
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                             <li>
-                                                                <a className="dropdown-item" href="academic.html">
+                                                                <Link className="dropdown-item" to="/course-single">
                                                                     O-Level Grade 10 (Online) 
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                             <li>
-                                                                <a className="dropdown-item" href="academic.html">
+                                                                <Link className="dropdown-item" to="/course-single">
                                                                     AS Level
-                                                                </a>
+                                                                </Link>
                                                             </li>
                                                         </ul>
                                                     </div>
@@ -257,10 +277,11 @@ const Header = () => {
                                     </ul>
                                 </li> */}
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Admissions</a>
+                                    <Link className="nav-link dropdown-toggle" to="/" data-bs-toggle="dropdown">Admissions</Link>
                                     <ul className="dropdown-menu fade-down">
-                                        <li><a className="dropdown-item" href="how-to-apply.html">How To Apply</a></li>
-                                        <li><a className="dropdown-item" href="application-form.html">Application Form</a></li>
+                                        <li><Link className="dropdown-item" to="/application-form">Application Form</Link></li>
+                                        <li><Link className="dropdown-item" to="/courses">Courses</Link></li>
+                                        <li><Link className="dropdown-item" to="/how-to-apply">How To Apply</Link></li>
                                         {/* <li className="dropdown-submenu">
                                             <a className="dropdown-item dropdown-toggle" href="#">Our Campus</a>
                                             <ul className="dropdown-menu">
@@ -294,35 +315,59 @@ const Header = () => {
                                                 <li><a className="dropdown-item" href="club-single.html">Club Single</a></li>
                                             </ul>
                                         </li> */}
-                                        <li><a className="dropdown-item" href="tuition-fee.html">Tuition Fees</a></li>
-                                        <li><a className="dropdown-item" href="alumni.html">Alumni</a></li>
-                                        <li><a className="dropdown-item" href="scholarship.html">Scholarships</a></li>
+                                        <li><Link className="dropdown-item" to="/scholarship">Scholarships</Link></li>
+                                        <li><Link className="dropdown-item" to="/tuition-fee">Tuition Fees</Link></li>
+                                        
                                         {/* <li><a className="dropdown-item" href="our-fund.html">Our Fund</a></li>
                                         <li><a className="dropdown-item" href="athletics.html">Athletics</a></li>
                                         <li><a className="dropdown-item" href="health-care.html">Health Care</a></li> */}
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown">
-                                    <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Registration</a>
+                                    <Link className="nav-link dropdown-toggle" to="/" data-bs-toggle="dropdown">Registration</Link>
                                     <ul className="dropdown-menu fade-down">
-                                        <li><a className="dropdown-item" href="blog.html">IGCSE Cambridge</a></li>
-                                        <li><a className="dropdown-item" href="blog-single.html">As Level Registration</a></li>
-                                        <li><a className="dropdown-item" href="blog-single.html">Registration To Be a Teacher</a></li>
+                                        <li><Link className="dropdown-item" to="/registration">IGCSE Cambridge</Link></li>
+                                        <li><Link className="dropdown-item" to="/registration">As Level Registration</Link></li>
+                                        <li><Link className="dropdown-item" to="/registration">Registration To Be a Teacher</Link></li>
                                     </ul>
                                 </li>
-                                <li className="nav-item"><a className="nav-link" href="contact.html">Contact</a></li>
+                                <li className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></li>
                             </ul>
                             <div className="nav-right">
                                 <div className="search-btn">
                                     {/* <button type="button" className="nav-right-link search-box-outer" onClick={() => setIsSearchActive(true)}><i
                                             className="far fa-search"></i></button> */}
-                                    <button type="button" className="nav-right-link search-box-outer"><i
-                                            className="far fa-search"></i></button>
+                                    <button 
+                                        type="button" 
+                                        className="nav-right-link search-box-outer"
+                                        onClick={() => setIsSearchActive(true)}
+                                    >
+                                        <i className="far fa-search"></i>
+                                    </button>
+
+                                    {/* popup search */}
+                                    {isSearchActive && (
+                                        <div className="search-popup">
+                                            <button 
+                                                className="close-search"
+                                                onClick={() => setIsSearchActive(false)}
+                                            >
+                                                <span className="far fa-times"></span>
+                                            </button>
+                                            <form action="#">
+                                                <div className="form-group">
+                                                    <input type="search" name="search-field" placeholder="Search Here..." required />
+                                                    <button type="submit"><i className="far fa-search"></i></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    )}
 
                                 </div>
                                 <div className="nav-right-btn mt-2">
-                                    <a href="application-form.html" className="theme-btn"><span
-                                        className="fal fa-pencil"></span>Login</a>
+                                    <Link to="/login" className="theme-btn">
+                                        <span className="fal fa-pencil"></span>Login
+                                    </Link>
                                 </div>
                             </div>
                         </div>
